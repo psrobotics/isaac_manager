@@ -41,7 +41,7 @@ clean-conda:
 
 clean-uv:
 	@if [ -d "resources/IsaacLab/ilab" ]; then \
-		rm -rf resources/IsaacLab/ilab; \
+		rm -rf ilab/; \
 	fi
 
 setup: setup-$(PACKAGE_MANAGER)
