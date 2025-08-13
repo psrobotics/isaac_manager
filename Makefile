@@ -7,7 +7,7 @@ VENV_NAME ?= ilab
 ISAACSIM_SETUP := resources/IsaacLab/_isaac_sim/setup_conda_env.sh
 PYTHON_PATH := resources/isaacsim/_build/linux-x86_64/release/kit/python/bin/python3
 
-.PHONY: all deps gitman clean setup setup-conda setup-uv clean-conda clean-uv cluster
+.PHONY: all deps gitman clean setup setup-conda setup-uv clean-conda clean-uv
 
 all: deps gitman clean setup
 
