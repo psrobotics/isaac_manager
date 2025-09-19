@@ -1,7 +1,7 @@
 # Isaac Made Easy
 
 Tested with:
-* Ubuntu 22.04
+* Ubuntu 22.04 24.04
 * IsaacSim 5.0.0
 * IsaacLab 2.2.0
 

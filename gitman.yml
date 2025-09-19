@@ -1,23 +1,23 @@
 location: resources
 sources:
   # main repos
-    - repo: https://github.com/isaac-sim/IsaacSim.git
-      name: isaacsim
-      rev: main
-      type: git
-      scripts:
-        - git lfs install
-        - git lfs pull
-        - ./build.sh -q
-        - ln -snf "$(realpath _build/linux-x86_64/release)" ../IsaacLab/_isaac_sim
-    - repo: https://github.com/isaac-sim/IsaacLab.git
-      name: IsaacLab
-      rev: main
-      type: git
-    # extensions
-    # - repo: <repo>
-    #   name: IsaacLab/source/<repo>
-    #   rev: main
-    #   type: git
+  - repo: https://github.com/isaac-sim/IsaacSim.git
+    name: isaacsim
+    # Isaac Lab 2.2 is built for Isaac Sim 5.0 — pin one of the 5.0 tags
+    rev: v5.0.0
+    type: git
+    scripts:
+      - git lfs install
+      - git lfs pull
+      - ./build.sh -q
+      - ln -snf "$(realpath _build/linux-x86_64/release)" ../IsaacLab/_isaac_sim
+
+  - repo: https://github.com/isaac-sim/IsaacLab.git
+    name: IsaacLab
+    # Pin to the 2.2.0 tag (downgrade from main/head)
+    rev: v2.2.0
+    type: git
+
+# extensions ...
 default_group: ''
 groups:
